@@ -5,10 +5,17 @@ h1 {
   text-align: center;
   font-family: sans-serif;
 }
+h4 {
+  text-align: center;
+}
+label {
+  text-align: center;
+  font-weight: 300;
+}
 .container {
   display: grid;
   padding: 5px;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 3fr 1fr;
   column-gap: 10px;
-  row-gap: 15px;
+  row-gap: 20px;
 }
