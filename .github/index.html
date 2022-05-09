@@ -13,12 +13,21 @@
       <h1>Taskmaster To-Do list</h1>
     </header>
     <main class="container">
-      <label>Tasks:</label><input id="taskInput" />
+<form onsubmit="f()">
+      <label>Tasks:</label><input placeholder="Type task here..." id="taskInput" />
       <button id="taskButton">Add Task</button>
-      <label>Users:</label><input id="userInput" />
+</form>
+<form>
+      <label>Users:</label><input placeholder="Add user here..." id="userInput" />
       <button id="userButton">Add User</button>
-      <h4 id="listInput" class="list">Tasklist:</h4>
-      <h4 class="userlist">Select user:</h4>
+</form> 
+<h4 id="userList" class="userlist">Select user:</h4>
+      
+<h4 id="listElement" class="list">Tasklist:</h4>
+      <h5 id="outputText">yyyy</h5>
+    
+     <h5 id="userOutput">hhhh</h5>
+
     </main>
   </body>
 </html>
