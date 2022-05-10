@@ -6,27 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
     <title>Taskmaster</title>
-    <script src="todo.js"></script>
   </head>
   <body>
     <header>
       <h1>Taskmaster To-Do list</h1>
     </header>
     <main class="container">
-      <label>Tasks:</label
-      ><input placeholder="Type task here..." id="taskInput" />
-      <button id="taskButton">Add Task</button>
+      <input type="text" class="todoInput" placeholder="Type task here..." />
+      <button class="todoButton" type="submit">
+        Add Task
+        <i class="fas"></i>
+      </button>
 
-      <label>Users:</label
-      ><input placeholder="Add user here..." id="userInput" />
-      <button id="userButton">Add User</button>
+      <div class="todoContainer">
+        <ul class="myUL">
+          <div class="todo">
+            <li>test task</li>
 
-      <h4 id="userList" class="userlist">Select user:</h4>
-
-      <h4 id="listElement" class="list">Tasklist:</h4>
-      <h5 id="outputText">yyyy</h5>
-
-      <h5 id="userOutput">hhhh</h5>
+            <div class="todo">
+              <li></li>
+              <button>delete</button>
+              <button>checked</button>
+            </div>
+          </div>
+        </ul>
+      </div>
     </main>
+    <script src="todo.js"></script>
   </body>
 </html>
