@@ -8,7 +8,7 @@ function addTask(){
  
 }
 const taskButtonElement = document.getElementById("taskButton");
-taskButtonElement.addEventListener("click", onClickHandler);
+taskButtonElement.addEventListener("click", addTask);
 
 
 const card = document.createElement("li");
