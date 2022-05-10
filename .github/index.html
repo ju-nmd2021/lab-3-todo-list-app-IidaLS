@@ -6,27 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
     <title>Taskmaster</title>
-    <script src="todo.js"></script>
+   
   </head>
   <body>
     <header>
       <h1>Taskmaster To-Do list</h1>
     </header>
     <main class="container">
-      <label>Tasks:</label
-      ><input placeholder="Type task here..." id="taskInput" />
+    
+      <form>
+      <input type="text" placeholder="Type task here..." id="taskInput" />
       <button id="taskButton">Add Task</button>
+      </form>
 
-      <label>Users:</label
-      ><input placeholder="Add user here..." id="userInput" />
+      <form>
+      <input placeholder="Add user here..." id="userInput" />
       <button id="userButton">Add User</button>
-
+      </form>
       <h4 id="userList" class="userlist">Select user:</h4>
 
       <h4 id="listElement" class="list">Tasklist:</h4>
-      <h5 id="outputText">yyyy</h5>
+<!-- The following 7 lines of code has been borrowed from https://www.tutorialstonight.com/to-do-list-javascript.php -->
+      <ul id="myUL">
+        <li>
+          <input type="checkbox" onclick="taskComplete(this)" class="check">
+          <input type="text" value="Exercise" class="task" onfocus="getCurrentTask(this)" onblur="editTask(This)">
+          <i class=""fa fa-trash" onclick="removeTask(this)"></i>
+        </li>
+      </ul>
+     <!-- <h5 id="outputText">yyyy</h5>
 
-      <h5 id="userOutput">hhhh</h5>
-    </main>
+      <h5 id="userOutput">hhhh</h5>-->
+    </main> 
+    <script src="todo.js"></script>
   </body>
 </html>
