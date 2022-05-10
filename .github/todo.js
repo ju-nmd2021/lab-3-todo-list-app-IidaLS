@@ -20,13 +20,14 @@ function addTodo(event) {
   todoDiv.appendChild(newTodo);
   // check
   const completedButton = document.createElement("button");
-  completedButton.innerText = "close";
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
   completedButton.classList.add("completedButton");
   todoDiv.appendChild(completedButton);
-//remove
+  //remove
   const removeButton = document.createElement("button");
-  removeButton.innerText = "close";
-  cremoveButtonn.classList.add("removeButton");
+  removeButton.innerHTML = '<i class="fas fa-trash"></i>';
+  removeButtonn.classList.add("removeButton");
   todoDiv.appendChild(removeButton);
-}
+  //append to list
+  todoList.appendChild(todoDiv);
 }
