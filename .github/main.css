@@ -37,3 +37,6 @@ label {
   cursor: pointer;
   -webkit-appearance: none;
 }
+ul.todo.complete li .buttons button.completed {
+  text-decoration: line-through;
+}

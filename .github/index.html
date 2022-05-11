@@ -14,10 +14,21 @@
     <main class="container">
       <form>
         <input type="text" placeholder="Type task here..." id="taskInput" />
-        <button type="button" id="taskButton" onclick="newElement">
+        <button id="taskButton">
           Add Task
         </button>
       </form>
+      <div class="listcontainer">
+
+<ul class="todo">
+  <li> List item test</li>
+  <div>
+    <button Class="complete"> Done </button>
+    <button class="remove"> Remove </button>
+  </div>
+</ul>
+
+      </div>
 
       <form>
         <input placeholder="Add user here..." id="userInput" />
@@ -26,18 +37,7 @@
       <h4 id="userList" class="userlist">Select user:</h4>
 
       <h4 id="listElement" class="list">Tasklist:</h4>
-      <!-- The following 7 lines of code has been borrowed from https://www.tutorialstonight.com/to-do-list-javascript.php --
-      <ul id="myUL">
-        <li>
-          <input type="checkbox" onclick="taskComplete(this)" class="check">
-          <input type="text" value="Exercise" class="task" onfocus="getCurrentTask(this)" onblur="editTask(This)">
-          <i class=""fa fa-trash" onclick="removeTask(this)"></i>
-        </li>
-      </ul>
-     -- <h5 id="outputText">yyyy</h5>
-
-      <h5 id="userOutput">hhhh</h5>-->
-    </main>
+    
     <script src="todo.js"></script>
   </body>
 </html>
