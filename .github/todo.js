@@ -1,17 +1,94 @@
+let taskButtonElement;
+let listElement;
+let taskInputElement; 
+let currentElement; 
+
+function saveToLocalStorage(textItem) {
+  localStorage.taskList = textItem;
+} 
+
+function createCurrentElement(textItem) {
+  currentElement = document.createElement("div");
+
+  const spanElement = document.createElement("span");
+  spanElement.innerText = textItem;
+  currentElement.appendChild(spanElement);
+
+  const deleteButtonElement = document.createElement("button");
+  deleteButtonElement.innerText = "Delete me";
+  deleteButtonElement.addEventListener("click", () => {
+    deleteFromLocalStorage();
+    currentElement.parentNode.removeChild(currentElement);
+    currentElement = undefined;
+  });
+  currentElement.appendChild(deleteButtonElement);
+
+  containerElement.appendChild(currentElement);
+}
+
+/*function createCurrentElement(textItem) {
+  currentElement = document.addTask("div");
+  const spanElement = document.createElement("span");
+  spanElement.innerText = textItem;
+  currentElement.appendChild(spanElement);
+
+  const button = document.createElement("button");
+  button.innerText = "remove";
+  button.onclick = removeElement;
+
+currentElement.appendChild(deleteButtonElement);
+
+containerElement.appendChild(currentElement);
+}
+*/
+function createElementHandler() {
+  const textItem = taskInputElement.value;
+  if (textItem === "") {
+    alert("Please enter a word");
+    return;
+  }
+  if (currentElement !== undefined) {
+    alert("Please delete the current element first");
+    return;
+  }
+  createCurrentElement(textItem);
+  saveToLocalStorage(textItem);
+  inputElement.value = "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //const taskElement = getElementById="";
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 const taskListElement = (getElementById = "listElement");
 
