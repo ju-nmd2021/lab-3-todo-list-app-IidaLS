@@ -1,4 +1,18 @@
 //const taskElement = getElementById="";
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const taskListElement = (getElementById = "listElement");
 
 function addTask() {
@@ -13,10 +27,11 @@ function addTask() {
   }
   document.getElementById("userInput").Value = "";
 }
-var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
+  var li = document.createElement("li");
+  var span = document.createElement("span");
+  var text = document.createTextNode("???");
   span.className = "close";
-  span.appendChild(txt);
+  span.appendChild(text);
   li.appendChild(span);
 
   for (i = 0; i < close.length; i++) {
@@ -25,9 +40,8 @@ var span = document.createElement("SPAN");
       div.style.display = "none";
     }
   }
-}
 
-
+*/
 
 
 
