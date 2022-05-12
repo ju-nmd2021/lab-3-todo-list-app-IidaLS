@@ -3,15 +3,16 @@ let taskInputElement = document.getElementById("taskInput").value;
 const todoListElement = document.getElementById("todoList");
 const taskButtonElement = document.getElementById("taskButton");
 
-let finalList = ["hej"];
+let finalList = [];
 
-for(let task of finalList) {
+for (let task of taskInputElement) {
   const divElement = document.createElement("div");
   divElement.innerText = task;
   divElement.classList.add("list") 
   divElement.onclick = addToFinalList;
   todoListElement.appendChild(divElement);
 }
+
 
 function addToFinalList() {
   finalList.push(taskInputElement);
@@ -24,7 +25,7 @@ function addToFinalList() {
 
   const removeButton = document.createElement("button");
   removeButton.innerText = "Remove";
-  removeButton.onclick = removeElement;
+  removeButton.onclick = "removeElement()";
   listElement.appendChild(removeButton);
 
   taskButtonElement.appendChild(listElement);
