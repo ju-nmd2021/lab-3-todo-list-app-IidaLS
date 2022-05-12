@@ -1,3 +1,68 @@
+
+let taskInputElement = document.getElementById("taskInput").value;
+const todoListElement = document.getElementById("todoList");
+const taskButtonElement = document.getElementById("taskButton");
+
+let finalList = ["hej"];
+
+for(let task of finalList) {
+  const divElement = document.createElement("div");
+  divElement.innerText = task;
+  divElement.classList.add("list") 
+  divElement.onclick = addToFinalList;
+  todoListElement.appendChild(divElement);
+}
+
+function addToFinalList() {
+  finalList.push(taskInputElement);
+
+  const listElement = document.createElement("ul");
+
+  const spanElement = document.createElement("span");
+  spanElement.innerText = taskInputElement;
+  listElement.appendChild(spanElement);
+
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "Remove";
+  removeButton.onclick = removeElement;
+  listElement.appendChild(removeButton);
+
+  taskButtonElement.appendChild(listElement);
+}
+ function removeElement() {
+   const element = this.parentNode;
+   element.parentNode.removeChild(element);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 let taskButtonElement;
 let listElement;
 let taskInputElement; 
@@ -26,7 +91,7 @@ function createCurrentElement(textItem) {
   containerElement.appendChild(currentElement);
 }
 
-/*function createCurrentElement(textItem) {
+function createCurrentElement(textItem) {
   currentElement = document.addTask("div");
   const spanElement = document.createElement("span");
   spanElement.innerText = textItem;
@@ -40,7 +105,7 @@ currentElement.appendChild(deleteButtonElement);
 
 containerElement.appendChild(currentElement);
 }
-*/
+
 function createElementHandler() {
   const textItem = taskInputElement.value;
   if (textItem === "") {
@@ -56,7 +121,7 @@ function createElementHandler() {
   inputElement.value = "";
 }
 
-
+*/
 
 
 
