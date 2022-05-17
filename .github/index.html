@@ -12,26 +12,47 @@
       <h1>Taskmaster To-Do list</h1>
     </header>
     <main class="container">
-      <input type="text" class="todoInput" placeholder="Type task here..." />
-      <button class="todoButton" type="submit">
-        Add Task
-        <i class="fas"></i>
-      </button>
+      <form class="input">
+        <input type="text" placeholder="Type task here..." id="taskInput" />
+        <button type="button" id="taskButton">Add</button>
+      </form>
 
-      <div class="todoContainer">
-        <ul class="myUL">
-          <div class="todo">
-            <li>test task</li>
-
-            <div class="todo">
-              <li></li>
-              <button>delete</button>
-              <button>checked</button>
-            </div>
-          </div>
-        </ul>
-      </div>
+      <h4>Tasklist:</h4>
+      <div class="list" id="todoList" contenteditable="true"></div>
     </main>
+
     <script src="todo.js"></script>
   </body>
 </html>
+<!--
+    <main class="container">
+      <form>
+        <input type="text" placeholder="Type task here..." id="taskInput" />
+        <button id="taskButton">
+          Add Task
+        </button>
+      </form>
+      <div class="listcontainer">
+
+<ul class="todo">
+  <li> List item test</li>
+  <div>
+    <button class="complete"> Done </button>
+    <button class="remove"> Remove </button>
+  </div>
+</ul>
+
+      </div>
+
+      <form>
+        <input placeholder="Add user here..." id="userInput" />
+        <button id="userButton">Add User</button>
+      </form>
+      <h4 id="userList" class="userlist">Select user:</h4>
+
+      <h4 id="listElement" class="list">Tasklist:</h4>
+    
+    <script src="todo.js"></script>
+  </body>
+</html>
+-->

@@ -1,33 +1,33 @@
-//selectors
-const todoInput = document.querySelector(".todoInput");
-const todoButton = document.querySelector(".todoButton");
-const todoList = document.querySelector(".todoList");
+let taskInputElement = document.getElementById("taskInput");
+const todoListElement = document.getElementById("todoList");
+const taskButtonElement = document.getElementById("taskButton");
 
-//event listeners
-todoButton.addEventListener("click", addTodo);
+let addTask = function () {
+  if (taskInputElement.value == "") {
+    alert("add task");
+    return;
+  } else {
+    var listItem = document.createElement("div");
+    listItem.className = "task";
+    listItem.innerText = taskInputElement.value;
+    todoListElement.appendChild(listItem);
+    taskInputElement.value = "";
 
-//functions
-function addTodo(event) {
-  event.preventDefault();
+    var markButton = document.createElement("button");
+    markButton.innerText = "Done";
+    todoListElement.appendChild(markButton);
+    markButton.addEventListener("click", function () {
+      listItem.style.textDecoration = "line-through";
+    });
 
-  //Todo div
-  const todoDiv = document.createElement("div");
-  todoDiv.classList.add("todo");
-  //create LI
-  const newTodo = document.createElement("li");
-  newTodo.innerText = "hey";
-  newTodo.classList.add("todo-item");
-  todoDiv.appendChild(newTodo);
-  // check
-  const completedButton = document.createElement("button");
-  completedButton.innerHTML = '<i class="fas fa-check"></i>';
-  completedButton.classList.add("completedButton");
-  todoDiv.appendChild(completedButton);
-  //remove
-  const removeButton = document.createElement("button");
-  removeButton.innerHTML = '<i class="fas fa-trash"></i>';
-  removeButtonn.classList.add("removeButton");
-  todoDiv.appendChild(removeButton);
-  //append to list
-  todoList.appendChild(todoDiv);
-}
+    var deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    todoListElement.appendChild(deleteButton);
+    deleteButton.addEventListener("click", function () {
+      listItem.parentNode.removeChild(listItem);
+      deleteButton.parentNode.removeChild(deleteButton);
+      markButton.parentNode.removeChild(markButton);
+    });
+  }
+};
+taskButton.addEventListener("click", addTask);
