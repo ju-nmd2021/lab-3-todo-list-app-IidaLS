@@ -4,7 +4,7 @@ const taskButtonElement = document.getElementById("taskButton");
 
 let addTask = function () {
   if (taskInputElement.value == "") {
-    alert("add task");
+    alert("Please write a task");
     return;
   } else {
     var listItem = document.createElement("div");
