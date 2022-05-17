@@ -31,3 +31,11 @@ let addTask = function () {
   }
 };
 taskButton.addEventListener("click", addTask);
+
+//local storage
+if (localStorage.tasks === undefined) {
+  localStorage.tasks = JSON.stringify(["somthing", "something else", "idk"]);
+}
+let tasksArray = JSON.parse(localStorage.tasks);
+tasksArray.push(tasks);
+localStorage.tasks = JSON.stringify(tasksArray);
