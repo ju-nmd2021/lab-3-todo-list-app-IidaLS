@@ -7,34 +7,39 @@ let addTask = function () {
     alert("Please write a task");
     return;
   } else {
-    var listItem = document.createElement("div");
-    listItem.className = "task";
-    listItem.innerText = taskInputElement.value;
-    todoListElement.appendChild(listItem);
-    taskInputElement.value = "";
+    if (localStorage.tasks !== undefined) {
+      let tasksArray = JSON.parse(localStorage.tasks);
+    }
+    for (let tasks of tasksArray) {
+      var listItem = document.createElement("div");
+      listItem.className = "task";
+      listItem.innerText = taskInputElement.value;
+      todoListElement.appendChild(listItem);
+      taskInputElement.value = "";
 
-    var markButton = document.createElement("button");
-    markButton.innerText = "Done";
-    todoListElement.appendChild(markButton);
-    markButton.addEventListener("click", function () {
-      listItem.style.textDecoration = "line-through";
-    });
+      var markButton = document.createElement("button");
+      markButton.innerText = "Done";
+      todoListElement.appendChild(markButton);
+      markButton.addEventListener("click", function () {
+        listItem.style.textDecoration = "line-through";
+      });
 
-    var deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
-    todoListElement.appendChild(deleteButton);
-    deleteButton.addEventListener("click", function () {
-      listItem.parentNode.removeChild(listItem);
-      deleteButton.parentNode.removeChild(deleteButton);
-      markButton.parentNode.removeChild(markButton);
-    });
+      var deleteButton = document.createElement("button");
+      deleteButton.innerText = "Delete";
+      todoListElement.appendChild(deleteButton);
+      deleteButton.addEventListener("click", function () {
+        listItem.parentNode.removeChild(listItem);
+        deleteButton.parentNode.removeChild(deleteButton);
+        markButton.parentNode.removeChild(markButton);
+      });
+    }
   }
 };
 taskButton.addEventListener("click", addTask);
 
 //local storage
 if (localStorage.tasks === undefined) {
-  localStorage.tasks = JSON.stringify(["somthing", "something else", "idk"]);
+  localStorage.tasks = JSON.stringify([]);
 }
 let tasksArray = JSON.parse(localStorage.tasks);
 tasksArray.push(tasks);
