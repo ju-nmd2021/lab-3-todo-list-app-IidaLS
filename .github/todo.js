@@ -48,4 +48,4 @@ function loadPage() {
   };
 }
 taskButton.addEventListener("click", addTask);
-window.addEventListener("load", loadpage);
+window.addEventListener("load", loadPage);
