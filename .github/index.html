@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />'
+    <link rel="stylesheet" href="main.css" />
+    <script src="todo.js"></script>
     <title>Taskmaster</title>
   </head>
-
   <body>
     <header>
       <h1>Taskmaster To-Do list</h1>
-      <h5>Click to mark task as done, click again to delete a task.</h5>
-      <input class="input"type="text" placeholder="Type task here..." id="taskInput" />
-      <button type="button" id="taskButton">Add</button>
     </header>
-    <main>
-      <h4>Tasklist:</h4>
-      <div class="list" id="todoList"></div>
-    </main>
+    <main class="container">
+      <form class="input">
+        <input type="text" placeholder="Type task here..." id="taskInput" />
+        <button type="button" id="taskButton">Add</button>
+      </form>
 
-    <script src="todo.js"></script>    
+      <h4>Tasklist:</h4>
+      <div class="list" id="todoList" contenteditable="true"></div>
+    </main>
   </body>
 </html>
