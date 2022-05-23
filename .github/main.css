@@ -1,34 +1,27 @@
 body {
-  background-color: blanchedalmond;
+  background-color: #9Cd0c4;
 }
 h1 {
   text-align: center;
-  font-family: sans-serif;
-}
-h4 {
-  text-align: center;
+  font-family:monospace;
+  font-size:1.5cm;
 }
 h5 {
   text-align: center;
+  font-family: monospace;
 }
-.input {
-  text-align: center;
-}
-label {
-  text-align: center;
-  font-weight: 300;
-}
-.container {
-  display: grid;
-  padding: 5px;
-  grid-template-columns: 1fr 1fr 3fr;
-  column-gap: 10px;
-  row-gap: 20px;
+h4 {
+  padding-left: 60px;
+  font-family:monospace;
+  font-size: 0.8cm;
 }
 .list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  outline: black;
-  outline-width: 4px;
-  padding: 1em;
+  padding: 40px;
+
+  list-style-type: square;
+  
+}
+main {
+font-size: larger;
+font-family: Arial, Helvetica, sans-serif;
 }
