@@ -1,3 +1,5 @@
+//Deseada helped with both local storage and marking tasks as done
+
 const addButton = document.getElementById("taskButton");
 const taskList = document.getElementsByClassName("todoList");
 const inputField = document.getElementById("taskInput");
@@ -7,11 +9,11 @@ function loadHandler(){
   if (localStorage.tasks === undefined) {
     localStorage.tasks = JSON.stringify([]);
   }
-  displayList();
+  list();
 }
 
 
-function displayList() {
+function list() {
 
   tasks = JSON.parse(localStorage.tasks);
 
@@ -28,7 +30,7 @@ function displayList() {
       if (task.completed === false) {
         task.completed = true;
         updateStorage();
-        displayList();
+        list();
       }
     });
     if (task.completed === true) {
@@ -38,28 +40,28 @@ function displayList() {
       taskElement.addEventListener("click", function () {
         tasks.splice(taskIndex, 1);
         updateStorage();
-        displayList();
+        list();
       });
     }
   }
 }
 taskButton.addEventListener("click", function () {
   if (inputField.value == "") {
-  alert("add task");
+  alert("Please write a task! :)");
   return;
 } else {
-  let newTask = {
+  let todo = {
     name: inputField.value,
     completed: false,
   };
   inputField.value = "";
 
-  if (newTask.name !== "") {
-    tasks.push(newTask);
+  if (todo.name !== "") {
+    tasks.push(todo);
   }
 
   updateStorage();
-  displayList();
+  list();
 }});
 
 function updateStorage() {
