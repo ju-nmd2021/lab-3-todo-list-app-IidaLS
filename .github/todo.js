@@ -2,6 +2,8 @@ let taskInputElement = document.getElementById("taskInput");
 const todoListElement = document.getElementById("todoList");
 const taskButtonElement = document.getElementById("taskButton");
 
+
+
 let addTask = function () {
   if (taskInputElement.value == "") {
     alert("Please write a task");
@@ -31,3 +33,9 @@ let addTask = function () {
   }
 };
 taskButton.addEventListener("click", addTask);
+taskInput.addEventListener("keypress", function(event){
+    if (event.key === "Enter") {
+        event.preventDefault();
+        taskButton.click();
+    }
+});
