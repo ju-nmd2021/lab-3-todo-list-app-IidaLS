@@ -4,6 +4,7 @@ body {
 h1 {
   text-align: center;
   font-family: sans-serif;
+<<<<<<< HEAD
 }
 h4 {
   text-align: center;
@@ -31,4 +32,13 @@ label {
   outline: black;
   outline-width: 4px;
   padding: 1em;
+=======
+}
+.container {
+  display: grid;
+  padding: 5px;
+  grid-template-columns: 50% 50%;
+  column-gap: 10px;
+  row-gap: 15px;
+>>>>>>> parent of c6aefa2 (editing)
 }
