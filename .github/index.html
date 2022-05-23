@@ -5,38 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />'
-    
     <title>Taskmaster</title>
   </head>
+
   <body>
     <header>
       <h1>Taskmaster To-Do list</h1>
+      <input type="text" placeholder="Type task here..." id="taskInput" />
+      <button type="button" id="taskButton">Add</button>
     </header>
-    <main class="container">
-<!--Adding a task-->
-      <form class="new-todo-form">
-        <input 
-        type="text" 
-        name="taskInput" 
-        placeholder="Type task here..." 
-        id="taskInput" />
-        <input id="addButton"
-        type="submit" 
-        value="Add"/>
-      </form>
-    <!--Actual list-->
-<section>
+    <main>
       <h4>Tasklist:</h4>
-      <div class="todoList" >
-        <div class="todoItem" contenteditable="true">
-           
-        <button contenteditable="false" class="delete">Delete</button>
-        <button contenteditable="false" class="done">Done</button></div>
-      </div>
-    </div>
-</section>      
+      <div class="list" id="todoList"></div>
     </main>
-<!--Link to JS-->
-    <script src="todo.js"></script>
+
+    <script src="todo.js"></script>    
   </body>
 </html>
